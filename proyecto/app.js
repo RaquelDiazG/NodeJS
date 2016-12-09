@@ -2,6 +2,10 @@ var express=require("express");
 
 var app=express();
 
+//Servir archivos estaticos (imagenes,css,js)
+//la ruta sería esta: http://localhost:8080/app.css
+app.use(express.static("public")); 
+
 app.set("view engine","jade");
 
 app.get("/",function(req,res){
